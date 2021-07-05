@@ -31,8 +31,10 @@ class MemoryGame {
     if (card1.name === card2.name) {
       this.pairsClicked++;
       this.pairsGuessed++;
+      return true;
     } else {
-      thi.spairsClicked++;
+      this.pairsClicked++;
+      return false;
     }
   }
 

@@ -44,11 +44,17 @@ window.addEventListener('load', (event) => {
   // Bind the click event of each element to a function
   document.querySelectorAll('.card').forEach((card) => {
     card.addEventListener('click', () => {
-      card.classList.add('turned')
-      setTimeout(() => {
-        card.classList.remove('turned')
-      }, 5000)      
+      card.classList.add('turned');
+      pickedCards.push(card)
+      if (memoryGame.pickedCards.length === 2 && memoryGame.checkIfPair() === true) {
+        
+      }
+     //setTimeout(() => {
+     //  card.classList.remove('turned')
+     //}, 1000)      
       console.log(`Card clicked: ${card}`);
     });
   });
 });
+// notas meves: al fer clic en una carta he de fer push al pickedCards, que nomes pot tenir un length de 2(0 i 1), es comparen si son iguals,
+// se sumen o no contadors
